@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Complaint Form</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
@@ -72,6 +72,22 @@
       background-color: #0056b3;
     }
   </style>
+
+  <script>
+    // Extract query parameter by name
+    function getQueryParam(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
+    // Fill Booking Number field if URL param exists
+    document.addEventListener('DOMContentLoaded', () => {
+      const bookingId = getQueryParam('bookingId');
+      if (bookingId) {
+        document.getElementById('00NgK000012dRt7').value = bookingId;
+      }
+    });
+  </script>
 </head>
 <body>
 
