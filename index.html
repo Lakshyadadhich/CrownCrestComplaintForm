@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complaint Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://media.istockphoto.com/id/510257890/video/customers-complaints-service-desk-bell.avif?s=640x640&k=20&c=2pl0wjQ2ZsZBA8OiWz4yZ4UmfKVx0v9iFw2H6pFLJ0E=') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Submit Your Complaint</h2>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgK000004KER8" method="POST">
+
+      <input type="hidden" name="orgid" value="00DgK000004KER8">
+      <input type="hidden" name="retURL" value="http://gmail.com">
+
+      <!-- Booking Number -->
+      <label for="00NgK000012dRt7">Booking Number</label>
+      <input id="00NgK000012dRt7" maxlength="20" name="00NgK000012dRt7" type="text" />
+
+      <!-- Subject -->
+      <label for="subject">Subject</label>
+      <input id="subject" maxlength="80" name="subject" type="text" />
+
+      <!-- Description -->
+      <label for="description">Description</label>
+      <textarea name="description" id="description"></textarea>
+
+      <!-- Submit -->
+      <input type="submit" name="submit" value="Submit Complaint">
+
+    </form>
+  </div>
+
+</body>
+</html>
